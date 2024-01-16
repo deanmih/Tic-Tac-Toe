@@ -25,6 +25,9 @@ function addChar(buttonId) {
             document.getElementById(lineCheckPoints[j]).style.background = "Black";
             document.getElementById(lineCheckPoints[j]).style.color = "White";
         }
+        for (let k = 1; winLineExists == 1 && k <= 9 || playerTurnIndex == 10 && k <= 9; ++k) {
+            document.getElementById(k).disabled = true;
+        }
         if (winLineExists == 1) {
             winMessage(firstPoint);
             refreshBtn();  
